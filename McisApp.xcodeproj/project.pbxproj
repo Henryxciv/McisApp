@@ -32,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F15AF331FE7717600F36BB0 /* McisApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "McisApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F2987161FE747FB00E1F361 /* generalTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = generalTabVC.swift; sourceTree = "<group>"; };
 		0F2987171FE747FB00E1F361 /* AnnouncementTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementTVC.swift; sourceTree = "<group>"; };
 		0F2987181FE747FB00E1F361 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		0F15AF321FE76EBA00F36BB0 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F15AF331FE7717600F36BB0 /* McisApp-Bridging-Header.h */,
 				0F2987291FE747FE00E1F361 /* AppDelegate.swift */,
 				0F2987241FE747FD00E1F361 /* objectClasses.swift */,
 			);
@@ -119,8 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				0F15AF2F1FE76E1F00F36BB0 /* Firebase */,
-				5DE59DE465E764DD42FC379C /* Frameworks */,
 				0F15AF321FE76EBA00F36BB0 /* Helper Files */,
+				0F15AF311FE76E9A00F36BB0 /* Table Cells */,
+				0F15AF2E1FE76E0A00F36BB0 /* View Controllers */,
 				0F29873E1FE74A1700E1F361 /* Assets.xcassets */,
 				0F29871E1FE747FC00E1F361 /* LaunchScreen.storyboard */,
 				0F29871C1FE747FB00E1F361 /* Main.storyboard */,
@@ -130,8 +133,7 @@
 				0F2987191FE747FB00E1F361 /* McisApp.xcdatamodeld */,
 				73BB150CF7AAF079044927EC /* Pods */,
 				0FBC1FD51F8ECA54005508F2 /* Products */,
-				0F15AF311FE76E9A00F36BB0 /* Table Cells */,
-				0F15AF2E1FE76E0A00F36BB0 /* View Controllers */,
+				5DE59DE465E764DD42FC379C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
