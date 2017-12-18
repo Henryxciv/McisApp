@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>491645028403-k8k9fvbmj9q9nvemmi6d8n7pl15k0k9b.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.491645028403-k8k9fvbmj9q9nvemmi6d8n7pl15k0k9b</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCLzbCPBy7Pf7MDEn-IoD2aysgPKimmcsI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>491645028403</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.makeit.McisApp</string>
+	<key>PROJECT_ID</key>
+	<string>mcisapp-b0ded</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mcisapp-b0ded.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:491645028403:ios:79c9d433c8963f99</string>
+	<key>DATABASE_URL</key>
+	<string>https://mcisapp-b0ded.firebaseio.com</string>
+</dict>
+</plist>

@@ -7,23 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FBC1FD81F8ECA54005508F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC1FD71F8ECA54005508F2 /* AppDelegate.swift */; };
-		0FBC1FDA1F8ECA54005508F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC1FD91F8ECA54005508F2 /* ViewController.swift */; };
-		0FBC1FDD1F8ECA54005508F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC1FDB1F8ECA54005508F2 /* Main.storyboard */; };
-		0FBC1FE01F8ECA54005508F2 /* McisApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC1FDE1F8ECA54005508F2 /* McisApp.xcdatamodeld */; };
-		0FBC1FE21F8ECA54005508F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC1FE11F8ECA54005508F2 /* Assets.xcassets */; };
-		0FBC1FE51F8ECA54005508F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBC1FE31F8ECA54005508F2 /* LaunchScreen.storyboard */; };
+		0F29872A1FE747FE00E1F361 /* generalTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987161FE747FB00E1F361 /* generalTabVC.swift */; };
+		0F29872B1FE747FE00E1F361 /* AnnouncementTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987171FE747FB00E1F361 /* AnnouncementTVC.swift */; };
+		0F29872C1FE747FE00E1F361 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987181FE747FB00E1F361 /* DataServices.swift */; };
+		0F29872D1FE747FE00E1F361 /* McisApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987191FE747FB00E1F361 /* McisApp.xcdatamodeld */; };
+		0F29872E1FE747FE00E1F361 /* AddAnnounceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F29871B1FE747FB00E1F361 /* AddAnnounceVC.swift */; };
+		0F29872F1FE747FE00E1F361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F29871C1FE747FB00E1F361 /* Main.storyboard */; };
+		0F2987301FE747FE00E1F361 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F29871D1FE747FC00E1F361 /* ChatVC.swift */; };
+		0F2987311FE747FE00E1F361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F29871E1FE747FC00E1F361 /* LaunchScreen.storyboard */; };
+		0F2987321FE747FE00E1F361 /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F29871F1FE747FC00E1F361 /* MessagesCell.swift */; };
+		0F2987331FE747FE00E1F361 /* ScholarshipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987201FE747FC00E1F361 /* ScholarshipVC.swift */; };
+		0F2987341FE747FE00E1F361 /* MessagesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987211FE747FC00E1F361 /* MessagesTVC.swift */; };
+		0F2987351FE747FE00E1F361 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987221FE747FC00E1F361 /* SignUpVC.swift */; };
+		0F2987361FE747FE00E1F361 /* AnnounceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987231FE747FD00E1F361 /* AnnounceCell.swift */; };
+		0F2987371FE747FE00E1F361 /* objectClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987241FE747FD00E1F361 /* objectClasses.swift */; };
+		0F2987381FE747FE00E1F361 /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987251FE747FD00E1F361 /* FirstPageVC.swift */; };
+		0F2987391FE747FE00E1F361 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987261FE747FD00E1F361 /* LoginVC.swift */; };
+		0F29873A1FE747FE00E1F361 /* AnnouncementDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987271FE747FD00E1F361 /* AnnouncementDetailsVC.swift */; };
+		0F29873B1FE747FE00E1F361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987291FE747FE00E1F361 /* AppDelegate.swift */; };
+		0F2987401FE74A1700E1F361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F29873D1FE74A1600E1F361 /* GoogleService-Info.plist */; };
+		0F2987411FE74A1700E1F361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F29873E1FE74A1700E1F361 /* Assets.xcassets */; };
+		0F2987421FE74A1700E1F361 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F29873F1FE74A1700E1F361 /* Info.plist */; };
+		AEB4724EE5A427A065BD09A9 /* Pods_McisApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23895334DE2A6BA7F7E5CB89 /* Pods_McisApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2987161FE747FB00E1F361 /* generalTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = generalTabVC.swift; path = McisApp/generalTabVC.swift; sourceTree = "<group>"; };
+		0F2987171FE747FB00E1F361 /* AnnouncementTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnouncementTVC.swift; path = McisApp/AnnouncementTVC.swift; sourceTree = "<group>"; };
+		0F2987181FE747FB00E1F361 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataServices.swift; path = McisApp/DataServices.swift; sourceTree = "<group>"; };
+		0F29871A1FE747FB00E1F361 /* McisApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = McisApp.xcdatamodel; sourceTree = "<group>"; };
+		0F29871B1FE747FB00E1F361 /* AddAnnounceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAnnounceVC.swift; path = McisApp/AddAnnounceVC.swift; sourceTree = "<group>"; };
+		0F29871C1FE747FB00E1F361 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = McisApp/Main.storyboard; sourceTree = "<group>"; };
+		0F29871D1FE747FC00E1F361 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = McisApp/ChatVC.swift; sourceTree = "<group>"; };
+		0F29871E1FE747FC00E1F361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = McisApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F29871F1FE747FC00E1F361 /* MessagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesCell.swift; path = McisApp/MessagesCell.swift; sourceTree = "<group>"; };
+		0F2987201FE747FC00E1F361 /* ScholarshipVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScholarshipVC.swift; path = McisApp/ScholarshipVC.swift; sourceTree = "<group>"; };
+		0F2987211FE747FC00E1F361 /* MessagesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesTVC.swift; path = McisApp/MessagesTVC.swift; sourceTree = "<group>"; };
+		0F2987221FE747FC00E1F361 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpVC.swift; path = McisApp/SignUpVC.swift; sourceTree = "<group>"; };
+		0F2987231FE747FD00E1F361 /* AnnounceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnounceCell.swift; path = McisApp/AnnounceCell.swift; sourceTree = "<group>"; };
+		0F2987241FE747FD00E1F361 /* objectClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = objectClasses.swift; path = McisApp/objectClasses.swift; sourceTree = "<group>"; };
+		0F2987251FE747FD00E1F361 /* FirstPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstPageVC.swift; path = McisApp/FirstPageVC.swift; sourceTree = "<group>"; };
+		0F2987261FE747FD00E1F361 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = McisApp/LoginVC.swift; sourceTree = "<group>"; };
+		0F2987271FE747FD00E1F361 /* AnnouncementDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnouncementDetailsVC.swift; path = McisApp/AnnouncementDetailsVC.swift; sourceTree = "<group>"; };
+		0F2987291FE747FE00E1F361 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = McisApp/AppDelegate.swift; sourceTree = "<group>"; };
+		0F29873C1FE748D200E1F361 /* McisApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = McisApp.entitlements; path = McisApp/McisApp.entitlements; sourceTree = "<group>"; };
+		0F29873D1FE74A1600E1F361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "McisApp/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F29873E1FE74A1700E1F361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = McisApp/Assets.xcassets; sourceTree = "<group>"; };
+		0F29873F1FE74A1700E1F361 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = McisApp/Info.plist; sourceTree = "<group>"; };
 		0FBC1FD41F8ECA54005508F2 /* McisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FBC1FD71F8ECA54005508F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FBC1FD91F8ECA54005508F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0FBC1FDC1F8ECA54005508F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0FBC1FDF1F8ECA54005508F2 /* McisApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = McisApp.xcdatamodel; sourceTree = "<group>"; };
-		0FBC1FE11F8ECA54005508F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0FBC1FE41F8ECA54005508F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0FBC1FE61F8ECA54005508F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23895334DE2A6BA7F7E5CB89 /* Pods_McisApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_McisApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DC35CAD1B2E6593037A4680 /* Pods-McisApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McisApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-McisApp/Pods-McisApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B81C84A7A70D6FDEA5CFBC17 /* Pods-McisApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McisApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-McisApp/Pods-McisApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB4724EE5A427A065BD09A9 /* Pods_McisApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +75,31 @@
 		0FBC1FCB1F8ECA53005508F2 = {
 			isa = PBXGroup;
 			children = (
-				0FBC1FD61F8ECA54005508F2 /* McisApp */,
+				0F29873E1FE74A1700E1F361 /* Assets.xcassets */,
+				0F29873D1FE74A1600E1F361 /* GoogleService-Info.plist */,
+				0F29873F1FE74A1700E1F361 /* Info.plist */,
+				0F29873C1FE748D200E1F361 /* McisApp.entitlements */,
+				0F29871B1FE747FB00E1F361 /* AddAnnounceVC.swift */,
+				0F2987231FE747FD00E1F361 /* AnnounceCell.swift */,
+				0F2987271FE747FD00E1F361 /* AnnouncementDetailsVC.swift */,
+				0F2987171FE747FB00E1F361 /* AnnouncementTVC.swift */,
+				0F2987291FE747FE00E1F361 /* AppDelegate.swift */,
+				0F29871D1FE747FC00E1F361 /* ChatVC.swift */,
+				0F2987181FE747FB00E1F361 /* DataServices.swift */,
+				0F2987251FE747FD00E1F361 /* FirstPageVC.swift */,
+				0F2987161FE747FB00E1F361 /* generalTabVC.swift */,
+				0F29871E1FE747FC00E1F361 /* LaunchScreen.storyboard */,
+				0F2987261FE747FD00E1F361 /* LoginVC.swift */,
+				0F29871C1FE747FB00E1F361 /* Main.storyboard */,
+				0F2987191FE747FB00E1F361 /* McisApp.xcdatamodeld */,
+				0F29871F1FE747FC00E1F361 /* MessagesCell.swift */,
+				0F2987211FE747FC00E1F361 /* MessagesTVC.swift */,
+				0F2987241FE747FD00E1F361 /* objectClasses.swift */,
+				0F2987201FE747FC00E1F361 /* ScholarshipVC.swift */,
+				0F2987221FE747FC00E1F361 /* SignUpVC.swift */,
 				0FBC1FD51F8ECA54005508F2 /* Products */,
+				73BB150CF7AAF079044927EC /* Pods */,
+				5DE59DE465E764DD42FC379C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,18 +111,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0FBC1FD61F8ECA54005508F2 /* McisApp */ = {
+		5DE59DE465E764DD42FC379C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FBC1FD71F8ECA54005508F2 /* AppDelegate.swift */,
-				0FBC1FD91F8ECA54005508F2 /* ViewController.swift */,
-				0FBC1FDB1F8ECA54005508F2 /* Main.storyboard */,
-				0FBC1FE11F8ECA54005508F2 /* Assets.xcassets */,
-				0FBC1FE31F8ECA54005508F2 /* LaunchScreen.storyboard */,
-				0FBC1FE61F8ECA54005508F2 /* Info.plist */,
-				0FBC1FDE1F8ECA54005508F2 /* McisApp.xcdatamodeld */,
+				23895334DE2A6BA7F7E5CB89 /* Pods_McisApp.framework */,
 			);
-			path = McisApp;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73BB150CF7AAF079044927EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DC35CAD1B2E6593037A4680 /* Pods-McisApp.debug.xcconfig */,
+				B81C84A7A70D6FDEA5CFBC17 /* Pods-McisApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FBC1FE91F8ECA54005508F2 /* Build configuration list for PBXNativeTarget "McisApp" */;
 			buildPhases = (
+				7EFD8D28545308051CE02BE7 /* [CP] Check Pods Manifest.lock */,
 				0FBC1FD01F8ECA54005508F2 /* Sources */,
 				0FBC1FD11F8ECA54005508F2 /* Frameworks */,
 				0FBC1FD21F8ECA54005508F2 /* Resources */,
+				C3F536FC655B82515D41A443 /* [CP] Embed Pods Frameworks */,
+				FD03B6B9F16B3E71B36AA831 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,7 +163,13 @@
 				TargetAttributes = {
 					0FBC1FD31F8ECA54005508F2 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -126,45 +196,111 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FBC1FE51F8ECA54005508F2 /* LaunchScreen.storyboard in Resources */,
-				0FBC1FE21F8ECA54005508F2 /* Assets.xcassets in Resources */,
-				0FBC1FDD1F8ECA54005508F2 /* Main.storyboard in Resources */,
+				0F29872F1FE747FE00E1F361 /* Main.storyboard in Resources */,
+				0F2987311FE747FE00E1F361 /* LaunchScreen.storyboard in Resources */,
+				0F2987411FE74A1700E1F361 /* Assets.xcassets in Resources */,
+				0F2987421FE74A1700E1F361 /* Info.plist in Resources */,
+				0F2987401FE74A1700E1F361 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EFD8D28545308051CE02BE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-McisApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3F536FC655B82515D41A443 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-McisApp/Pods-McisApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-McisApp/Pods-McisApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD03B6B9F16B3E71B36AA831 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-McisApp/Pods-McisApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FBC1FD01F8ECA54005508F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FBC1FE01F8ECA54005508F2 /* McisApp.xcdatamodeld in Sources */,
-				0FBC1FDA1F8ECA54005508F2 /* ViewController.swift in Sources */,
-				0FBC1FD81F8ECA54005508F2 /* AppDelegate.swift in Sources */,
+				0F2987301FE747FE00E1F361 /* ChatVC.swift in Sources */,
+				0F2987381FE747FE00E1F361 /* FirstPageVC.swift in Sources */,
+				0F29873A1FE747FE00E1F361 /* AnnouncementDetailsVC.swift in Sources */,
+				0F2987391FE747FE00E1F361 /* LoginVC.swift in Sources */,
+				0F2987341FE747FE00E1F361 /* MessagesTVC.swift in Sources */,
+				0F29872C1FE747FE00E1F361 /* DataServices.swift in Sources */,
+				0F29872D1FE747FE00E1F361 /* McisApp.xcdatamodeld in Sources */,
+				0F29872E1FE747FE00E1F361 /* AddAnnounceVC.swift in Sources */,
+				0F29873B1FE747FE00E1F361 /* AppDelegate.swift in Sources */,
+				0F2987321FE747FE00E1F361 /* MessagesCell.swift in Sources */,
+				0F29872B1FE747FE00E1F361 /* AnnouncementTVC.swift in Sources */,
+				0F2987361FE747FE00E1F361 /* AnnounceCell.swift in Sources */,
+				0F29872A1FE747FE00E1F361 /* generalTabVC.swift in Sources */,
+				0F2987351FE747FE00E1F361 /* SignUpVC.swift in Sources */,
+				0F2987331FE747FE00E1F361 /* ScholarshipVC.swift in Sources */,
+				0F2987371FE747FE00E1F361 /* objectClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		0FBC1FDB1F8ECA54005508F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FBC1FDC1F8ECA54005508F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0FBC1FE31F8ECA54005508F2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FBC1FE41F8ECA54005508F2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0FBC1FE71F8ECA54005508F2 /* Debug */ = {
@@ -276,14 +412,20 @@
 		};
 		0FBC1FEA1F8ECA54005508F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DC35CAD1B2E6593037A4680 /* Pods-McisApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = McisApp/McisApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S3WS8QKUJ;
 				INFOPLIST_FILE = McisApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeit.McisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "McisApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -291,14 +433,19 @@
 		};
 		0FBC1FEB1F8ECA54005508F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81C84A7A70D6FDEA5CFBC17 /* Pods-McisApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = McisApp/McisApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S3WS8QKUJ;
 				INFOPLIST_FILE = McisApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeit.McisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "McisApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,13 +475,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0FBC1FDE1F8ECA54005508F2 /* McisApp.xcdatamodeld */ = {
+		0F2987191FE747FB00E1F361 /* McisApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0FBC1FDF1F8ECA54005508F2 /* McisApp.xcdatamodel */,
+				0F29871A1FE747FB00E1F361 /* McisApp.xcdatamodel */,
 			);
-			currentVersion = 0FBC1FDF1F8ECA54005508F2 /* McisApp.xcdatamodel */;
-			path = McisApp.xcdatamodeld;
+			currentVersion = 0F29871A1FE747FB00E1F361 /* McisApp.xcdatamodel */;
+			name = McisApp.xcdatamodeld;
+			path = McisApp/McisApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
