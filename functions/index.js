@@ -19,7 +19,7 @@ exports.sendNotification = functions.database.ref('/announcements/{announce_id}'
 
 	const payload = {
         notification: {
-            title: "Announcement: " + newAnnounce.title,
+            title: newAnnounce.title,
             body: newAnnounce.details,
             sound: "default"
         }       

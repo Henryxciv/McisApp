@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Firebase
 import Toast_Swift
+import SwiftKeychainWrapper
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,13 +33,33 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func signInBtnPressed(_ sender: Any) {
-        self.view.makeToast("This is a piece of toast", duration: 2.0, position: .bottom, title: "Toast Title", image: UIImage(named: "crest.png")) { didTap in
-            if didTap {
-                print("completion from tap")
-            } else {
-                print("completion without tap")
-            }
+        if let email = emailTextField.text, let pwd = passwordTextField.text{
+            
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("HENRY: User successfully authenticated with FIR")
+                    
+                    if let user = user{
+                        if user.isEmailVerified{
+                            self.completeSignIn(id: user.uid)
+                        }
+                        else{
+                            self.view.makeToast("Email not yet verified", duration: 3.0, position: .center)
+                        }
+                    }
+                }
+                else{
+                    self.view.makeToast(error?.localizedDescription, duration: 3.0, position: .center)
+                }
+            })
         }
+        
+    }
+    
+    func completeSignIn(id: String){
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: "login")
+        print("HENRY: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToApp", sender: nil)
     }
     /*
     // MARK: - Navigation

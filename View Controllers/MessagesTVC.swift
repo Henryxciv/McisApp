@@ -14,24 +14,33 @@ import JSQMessagesViewController
 class MessagesTVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var messagesTableView: UITableView!
     
-    var userMessages = Dictionary<String, String>()
     let userID = KeychainWrapper.standard.string(forKey: "login")
+    
+    var userMessages = Dictionary<String, String>()
     var users: [user] = []
+    var dispalyedUsers: [user] = []
     var filteredUsers: [user] = []
     var inSearchMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //self.tableView.register(MessagesCell.self, forCellReuseIdentifier: "generalCell")
         
         DataServices.ds.Users_Ref.child(userID!).child("messages").observe(.childAdded, with: { (snapshot) -> Void in
             print(snapshot)
             let messageID = snapshot.value as! String
             
-            if let otherP = snapshot.key as? String{
-                self.userMessages.updateValue(messageID, forKey: otherP)
+            if let otherParty = snapshot.key as? String{
+                self.userMessages.updateValue(messageID, forKey: otherParty)
+                
+                for user in self.users{
+                    if user._key == otherParty{
+                        self.dispalyedUsers.append(user)
+                    }
+                }
             }
-            print(self.userMessages)
+            
             self.messagesTableView.reloadData()
         })
         
@@ -43,6 +52,12 @@ class MessagesTVC: UIViewController,UITableViewDelegate, UITableViewDataSource, 
             if let fname = userInfo["FirstName"] as! String!, let lname = userInfo["LastName"] as! String!, let email = userInfo["Email"] as! String!, let faculty = userInfo["Faculty"] as! String!{
                 let userData = user(key: key, fname: fname, lname: lname, email: email, faculty: faculty)
                 
+                //check if user key is already in communication with this person
+                for key in self.userMessages.keys{
+                    if userData._key == key{
+                        self.dispalyedUsers.append(userData)
+                    }
+                }
                 self.users.append(userData)
                 self.messagesTableView.reloadData()
             }
@@ -59,7 +74,7 @@ class MessagesTVC: UIViewController,UITableViewDelegate, UITableViewDataSource, 
         else{
             inSearchMode = true
             let lower = searchBar.text!
-            filteredUsers = users.filter({$0._fname.range(of: lower) != nil || $0._lname.range(of: lower) != nil})
+            filteredUsers = users.filter({($0._fname.range(of: lower) != nil || $0._lname.range(of: lower) != nil) && $0._key != userID})
             messagesTableView.reloadData()
         }
     }
@@ -70,6 +85,7 @@ class MessagesTVC: UIViewController,UITableViewDelegate, UITableViewDataSource, 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }
+    
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,31 +98,53 @@ class MessagesTVC: UIViewController,UITableViewDelegate, UITableViewDataSource, 
         if inSearchMode{
             return filteredUsers.count
         }
-        return userMessages.count + 1
+        return dispalyedUsers.count
     }
 
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let reuseidentifier = indexPath.row == 0 ? "generalCell":"chatCell"
         let reuseidentifier = "generalCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseidentifier, for: indexPath) //as! MessagesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseidentifier, for: indexPath) as! MessagesCell
+        
         if inSearchMode{
-            let searchName = filteredUsers[indexPath.row]._fname + " " + filteredUsers[indexPath.row]._lname
-            cell.textLabel?.text = searchName
+            let user = filteredUsers[indexPath.row]
+            cell.configure(user: user)
         }else{
-            if indexPath.row == 0{
-                cell.textLabel?.text = "MCIS Chat"
-            }
-            else{
-                let name = Array(userMessages)[indexPath.row-1].key
-                cell.textLabel?.text = name
-            }
+            let user = dispalyedUsers[indexPath.row]
+            cell.configure(user: user)
         }
-        
-        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = MessagesCell()
+        
+        if inSearchMode{
+            cell.cellUser = filteredUsers[(indexPath as NSIndexPath).row]
+        }
+        else{
+            cell.cellUser = dispalyedUsers[(indexPath as NSIndexPath).row]
+        }
+        self.performSegue(withIdentifier: "showChat", sender: cell)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let cell = sender as? MessagesCell {
+            let chatVc = segue.destination as! ChatVC
+            
+            let recipientID = cell.cellUser._key
+            let chatRefString = userID?.compare(recipientID, options: .anchored) == .orderedAscending ? userID! + "-" + recipientID:recipientID + "-" + userID!
+            chatVc.recipient = cell.cellUser
+            
+            chatVc.chatRef = DataServices.ds.Chat_Ref.child(chatRefString)
+        }
+    }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1.0
@@ -116,6 +154,7 @@ class MessagesTVC: UIViewController,UITableViewDelegate, UITableViewDataSource, 
         return 1.0
     }
  
+    
 
     /*
     // Override to support conditional editing of the table view.

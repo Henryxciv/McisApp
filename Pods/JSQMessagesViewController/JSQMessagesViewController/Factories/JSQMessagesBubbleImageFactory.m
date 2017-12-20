@@ -52,10 +52,10 @@
 	}
 	return self;
 }
-
+//THIS IS WHERE I MADE A CHANGE
 - (instancetype)init
 {
-    return [self initWithBubbleImage:[UIImage jsq_bubbleCompactImage] capInsets:UIEdgeInsetsZero];
+    return [self initWithBubbleImage:[UIImage jsq_bubbleRegularStrokedImage] capInsets:UIEdgeInsetsZero];
 }
 
 #pragma mark - Public

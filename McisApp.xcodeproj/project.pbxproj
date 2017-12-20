@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F16F4101FE8D7430050D2F7 /* InitialImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16F40F1FE8D7430050D2F7 /* InitialImageView.swift */; };
 		0F29872A1FE747FE00E1F361 /* generalTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987161FE747FB00E1F361 /* generalTabVC.swift */; };
 		0F29872B1FE747FE00E1F361 /* AnnouncementTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987171FE747FB00E1F361 /* AnnouncementTVC.swift */; };
 		0F29872C1FE747FE00E1F361 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2987181FE747FB00E1F361 /* DataServices.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0F15AF341FE7721B00F36BB0 /* McisApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "McisApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F16F40F1FE8D7430050D2F7 /* InitialImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialImageView.swift; sourceTree = "<group>"; };
 		0F2987161FE747FB00E1F361 /* generalTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = generalTabVC.swift; sourceTree = "<group>"; };
 		0F2987171FE747FB00E1F361 /* AnnouncementTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementTVC.swift; sourceTree = "<group>"; };
 		0F2987181FE747FB00E1F361 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				0F2987291FE747FE00E1F361 /* AppDelegate.swift */,
 				0F2987241FE747FD00E1F361 /* objectClasses.swift */,
+				0F16F40F1FE8D7430050D2F7 /* InitialImageView.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F16F4101FE8D7430050D2F7 /* InitialImageView.swift in Sources */,
 				0F2987301FE747FE00E1F361 /* ChatVC.swift in Sources */,
 				0F2987381FE747FE00E1F361 /* FirstPageVC.swift in Sources */,
 				0F29873A1FE747FE00E1F361 /* AnnouncementDetailsVC.swift in Sources */,

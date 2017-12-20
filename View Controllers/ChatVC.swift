@@ -13,8 +13,11 @@ import JSQMessagesViewController
 
 
 class ChatVC: JSQMessagesViewController {
-    //var channelRef: DatabaseReference?
-    var chatRef = DataServices.ds.Chat_Ref.child("general")
+    
+    var recipient: user!
+    let currentUser = DataServices.ds.user!
+    var chatRef: DatabaseReference!
+    //var chatRef = DataServices.ds.Chat_Ref.child("message1")
     
     lazy var storageRef: StorageReference = Storage.storage().reference(forURL: "gs://mcisapp-b0ded.appspot.com")
     
@@ -56,6 +59,9 @@ class ChatVC: JSQMessagesViewController {
         self.senderId = Auth.auth().currentUser?.uid
         self.senderDisplayName = DataServices.ds.user._fname + " " + DataServices.ds.user._lname
         
+        navigationItem.title = recipient._fname + " " + recipient._lname
+        //remove attachement button
+        self.inputToolbar.contentView.leftBarButtonItem = nil
         // No avatars
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
@@ -205,14 +211,16 @@ class ChatVC: JSQMessagesViewController {
         return nil
     }
     
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! JSQMessagesCollectionViewCell
         let message = messages[indexPath.item]
         
+       
         if message.senderId == senderId {
-            cell.textView?.textColor = UIColor.white
+            cell.textView?.textColor = UIColor.red
         } else {
-            cell.textView?.textColor = UIColor.black
+            cell.textView?.textColor = UIColor.init(red: 30/255, green: 108/255, blue: 60/255, alpha: 1.0)
         }
         return cell
     }
@@ -227,11 +235,13 @@ class ChatVC: JSQMessagesViewController {
             ]
         
         itemRef.setValue(messageItem) // 3
-        
         JSQSystemSoundPlayer.jsq_playMessageSentSound() // 4
-        
         finishSendingMessage() // 5
         isTyping = false
+        
+        //add message to both users
+        DataServices.ds.Users_Ref.child(currentUser._key).child("messages").updateChildValues([recipient._key:"talking"])
+        DataServices.ds.Users_Ref.child(recipient._key).child("messages").updateChildValues([currentUser._key:"talking"])
     }
     
     private func observeMessages() {
@@ -286,10 +296,7 @@ class ChatVC: JSQMessagesViewController {
     
     
     // MARK: UI and User Interaction
-    private func setupOutgoingBubble() -> JSQMessagesBubbleImage {
-        let bubbleImageFactory = JSQMessagesBubbleImageFactory()
-        return bubbleImageFactory!.outgoingMessagesBubbleImage(with: UIColor.init(red: 38/255, green: 135/255, blue: 75/255, alpha: 1.0))
-    }
+    
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return 15
     }
@@ -304,9 +311,14 @@ class ChatVC: JSQMessagesViewController {
         return NSAttributedString(string: name!)
     }
 
+    private func setupOutgoingBubble() -> JSQMessagesBubbleImage {
+        let bubbleImageFactory = JSQMessagesBubbleImageFactory()
+        return bubbleImageFactory!.outgoingMessagesBubbleImage(with: UIColor.black)
+    }
+    
     private func setupIncomingBubble() -> JSQMessagesBubbleImage {
         let bubbleImageFactory = JSQMessagesBubbleImageFactory()
-        return bubbleImageFactory!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
+        return bubbleImageFactory!.incomingMessagesBubbleImage(with: UIColor.black)
     }
     
     

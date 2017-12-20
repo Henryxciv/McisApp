@@ -8,11 +8,11 @@
 
 import UIKit
 import EventKit
+import Toast_Swift
 
 class AnnounceCell: UITableViewCell {
     @IBOutlet weak var senderLbl: UILabel!
-    @IBOutlet weak var foodLbl: UILabel!
-    
+    @IBOutlet weak var foodLbl: UILabel!    
     @IBOutlet weak var TitleLbl: UILabel!
     @IBOutlet weak var datesLbl: UILabel!
     
@@ -54,6 +54,7 @@ class AnnounceCell: UITableViewCell {
             
             if (granted && notExist){
                 print("granted calender access")
+                
                 let event: EKEvent = EKEvent(eventStore: eventStore)
                 event.title = self.titleString
                 event.startDate = eventDate!
@@ -66,12 +67,23 @@ class AnnounceCell: UITableViewCell {
                 
                 do{
                     try eventStore.save(event, span: .thisEvent)
+                    DispatchQueue.main.async {
+                        self.superview?.makeToast("Event has been added to your phone's calendar", duration: 3.0, position: .center, title: "Event Added", image: UIImage(named: "calendar-256.png"))
+                    }
                 }catch let error as NSError{
                     print("ERROR: \(error)")
                 }
                 
             }
             else{
+                DispatchQueue.main.async {
+                    var style = ToastStyle()
+
+                    style.messageAlignment = .center
+                    //style.backgroundColor = UIColor.init(red: 196/255, green: 28/255, blue: 25/255, alpha: 1.0)
+                    self.superview?.makeToast("Event already created", duration: 2.0, position: .center, style: style)
+                }
+                
                 print("Error in creating or event already exists")
             }
         }
