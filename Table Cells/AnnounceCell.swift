@@ -104,9 +104,9 @@ class AnnounceCell: UITableViewCell {
         datesLbl.text = datePlace
         location = loc
         
-        if ref != "Y"{
-            foodLbl.isHidden = true
-        }
+//        if ref != "Y"{
+//            foodLbl.isHidden = true
+//        }
     }
 
 }

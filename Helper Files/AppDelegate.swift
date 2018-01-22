@@ -37,12 +37,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         
         //print("Device Token = \(token)")
-        
     }
     
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //edit navigation bar font so back button has the same font as title
+        let customFont = UIFont(name: "American Typewriter", size: 17.0)!
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: customFont], for: .normal)
+
         //edit tab bar items
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for:.normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for:.selected)

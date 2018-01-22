@@ -10,7 +10,7 @@ import UIKit
 
 public class InitialImageView : UIImageView {
     
-    public var fontResizeValue:CGFloat = 0.5
+    public var fontResizeValue:CGFloat = 0.4
     public var font = UIFont.systemFont(ofSize: 20)  //font size does not matter, it will be calculated by the base on fontResizeValue and self.bounds
     public var isCircle = true
     

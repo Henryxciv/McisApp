@@ -25,6 +25,24 @@ class AnnouncementTVC: UITableViewController {
         
         Messaging.messaging().subscribe(toTopic: "announcements")
         
+        //to populate table view
+        DataServices.ds.Announcement_Ref.observe(.childAdded, with: { (snapshot) -> Void in
+            let announce = snapshot.value as! Dictionary<String, String>
+            
+            let announce_key = snapshot.key
+            
+            if let announceTitle = announce["title"] as String!, let announceAuthor = announce["author"] as String!, let announceDate = announce["date"] as String!, let announceDetail = announce["details"] as String!, let locate = announce["location"] as String!, let refresh = announce["refreshment"] as String!{
+                
+                let data = announcement(key: announce_key, title: announceTitle, author: announceAuthor, date: announceDate, details: announceDetail, loc: locate, ref: refresh)
+                
+                self.announcementArray.insert(data, at: 0)
+                
+                self.tableView.beginUpdates()
+                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+                self.tableView.endUpdates()
+            }
+        })
+        
         //to delete table cell if cell is removed from firebase
         DataServices.ds.Announcement_Ref.observe(.childRemoved) { (snapshot) -> Void in
             print(snapshot)
@@ -37,7 +55,10 @@ class AnnouncementTVC: UITableViewController {
             
             self.announcementArray.remove(at: index!)
             
-            self.tableView.reloadData()
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [IndexPath(row: index!, section: 0)], with: .automatic)
+            self.tableView.endUpdates()
+            
         }
         
         //to get user data and store it for user
@@ -56,23 +77,6 @@ class AnnouncementTVC: UITableViewController {
                 }
             }
         }
-        
-        //to populate table view
-        DataServices.ds.Announcement_Ref.observe(.childAdded, with: { (snapshot) -> Void in
-            
-            let announce = snapshot.value as! Dictionary<String, String>
-            
-            let announce_key = snapshot.key
-            
-            if let announceTitle = announce["title"] as String!, let announceAuthor = announce["author"] as String!, let announceDate = announce["date"] as String!, let announceDetail = announce["details"] as String!, let locate = announce["location"] as String!, let refresh = announce["refreshment"] as String!{
-                
-                let data = announcement(key: announce_key, title: announceTitle, author: announceAuthor, date: announceDate, details: announceDetail, loc: locate, ref: refresh)
-                
-                self.announcementArray.append(data)
-                self.tableView.reloadData()
-            }
-            
-        })
         
     }
     
@@ -103,17 +107,15 @@ class AnnouncementTVC: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         
-        if reuseIdentifier == "AnnounceCell"{
-            let announcecell = cell as! AnnounceCell
-            let ann = announcementArray[indexPath.row]
-            
-            announcecell.configure(poster: ann._author, title: ann._title, date: ann._date, details: ann._details, loc: ann._location, ref: ann._refreshment)
-            
-            return announcecell
+        
+        let announcecell = cell as! AnnounceCell
+        let ann = announcementArray[indexPath.row]
+ 
+        announcecell.configure(poster: ann._author, title: ann._title, date: ann._date, details: ann._details, loc: ann._location, ref: ann._refreshment)
+        if ann._refreshment != "Y"{
+            announcecell.foodLbl.isHidden = true
         }
-        // Configure the cell...
-
-        return cell
+        return announcecell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
