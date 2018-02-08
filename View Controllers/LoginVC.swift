@@ -56,19 +56,26 @@ class LoginVC: UIViewController {
         
     }
     
+    @IBAction func signUpPressed(_ sender: Any) {
+        performSegue(withIdentifier: "signUp", sender: self)
+    }
     func completeSignIn(id: String){
         let keychainResult = KeychainWrapper.standard.set(id, forKey: "login")
         print("HENRY: Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToApp", sender: nil)
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "signUp"{
+            let destinationVC = segue.destination as! SignUpVC
+            destinationVC.loggedIn = false
+        }
+        
+
     }
-    */
+    
 
 }
