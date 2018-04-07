@@ -55,6 +55,17 @@ class LoginVC: UIViewController {
         }
         
     }
+    @IBAction func forgotPassWordPressed(_ sender: Any) {
+        let email = emailTextField.text
+        Auth.auth().sendPasswordReset(withEmail: email!) { (error) in
+            if error == nil{
+                self.view.makeToast("Check email to reset password", duration: 3.0, position: .center)
+            }
+            else{
+                self.view.makeToast(error?.localizedDescription, duration: 3.0, position: .center)
+            }
+        }
+    }
     
     @IBAction func signUpPressed(_ sender: Any) {
         performSegue(withIdentifier: "signUp", sender: self)

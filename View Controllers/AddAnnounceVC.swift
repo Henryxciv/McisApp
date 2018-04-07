@@ -46,6 +46,8 @@ class AddAnnounceVC: UIViewController,UITextViewDelegate, UITextFieldDelegate{
         detailsTextView.layer.cornerRadius = 10
         detailsTextView.clipsToBounds = true
         
+        refreshmentTextField.layer.borderWidth = 0.5
+        
         titleTextField.layer.cornerRadius = 10
         titleTextField.clipsToBounds = true
         
@@ -95,7 +97,10 @@ class AddAnnounceVC: UIViewController,UITextViewDelegate, UITextFieldDelegate{
             refreshColors()
             detailsTextView.layer.borderColor = UIColor.red.cgColor
         }
-        
+        else if refreshmentTextField.text != "Y" && refreshmentTextField.text != "N"{
+            refreshColors()
+            refreshmentTextField.layer.borderColor = UIColor.red.cgColor
+        }
         else{
             if let poster = DataServices.ds.user{
                 
@@ -127,6 +132,7 @@ class AddAnnounceVC: UIViewController,UITextViewDelegate, UITextFieldDelegate{
             }
         }
     }
+    
     @IBAction func didTouchDate(_ sender: Any) {
         view.endEditing(true)
         datePicker.isHidden = false
